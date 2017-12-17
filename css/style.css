@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+/* Border box jest ustawiony dla wszystkich elementów na stronie (*) */
 }
 
 body {
@@ -8,3 +9,133 @@ body {
     margin: 0;
     font-weight: 300;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+section {
+    padding: 0 80px 100px;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+section h2 > span {
+    color: #1ac056;
+}
+
+#main-nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#main-nav > ul {
+    margin: 0;
+    float: right;
+/* floatem dorównujemy menu do prawej */
+}
+
+#main-nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 40px;
+}
+
+
+#main-nav > ul > li > a {
+color: #1ac056;
+text-decoration: none;
+font-weight: 300;
+}
+
+#main-nav > ul > li > a:hover {
+    color: #291f1a;
+}
+
+
+#main-header {
+    background-size: cover;
+/* cover, aby obrazek dopasowywał się do tekstu i skalował przy rozsuwaniu okna */
+    background-image: url("/img/header-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.main-header-content > h1 {
+    font-family: "Roboto";
+}
+
+.main-header-content {
+    padding: 30vh;
+    text-align: center;
+}
+
+#main-header .main-header-content h1 {
+    font-size: 4em;
+    font-family: "Roboto";
+    font-weight: 200;
+}
+
+#main-header .main-header-content span {
+    color: #1ac056;
+    font-weight: 400;
+}
+
+#main-header .main-header-content h2 {
+    font-weight: 200;
+    font-size: 2em;
+/* rozmiar czcionki jest w emach, bo emy się skalują */
+}
+
+
+#about {
+    background-color: #f9fcfe;
+    overflow: hidden;
+    
+}
+
+#about > figure {
+    width: 50%;
+    margin: 0;
+    float: left;
+    text-align: center;
+/* text align = wycentrowanie tekstu */
+}
+
+#about > article {
+    width: 50%;
+    float: left;
+}
+
+#about > figure > img {
+    max-height: 250px;
+    border: 14px #fff solid;
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+#skills > p {
+    text-align: center;
+
+}
+
+#skills div#skills-icons {
+    text-align: center;
+}
+
+#skills div#skills-icons figure {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
