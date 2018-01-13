@@ -8,34 +8,31 @@
         width: 100%;
     }
     
+/*  Inne sposoby:
+    #portfolio .portfolio-item:
+*/
 }
 @media all and (max-width: 992px) {
 /*  Rozdzielczość ustawiamy od nawyższej do najniższej. W innym wypadku dla pośrednich rozdzielczości trzeba by ustawić przedziały "od-do"  */
-    
 /*  Rozwijane menu  */
     
-    .col-1-2 {
-        width: 100%;
-    }
-    
-     
-   #main-nav .toggle {
+    .toggle {
         display: block;
         background-color: #fff;
-        width: 100%;
-        padding: 15px 40px;
+        padding: 0 20px;
         color: #1ac056;
-        font-size: 30px;
+        font-size: 20px;
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
         text-align: right;
     }
     
-     
+        #main-nav > ul {
+        display: none;
+    }
     #main-nav #drop:checked + ul {
         display: block;
-    }
-    
-      #main-nav > ul {
-        display: none;
     }
     
     #main-nav > ul > li {
@@ -44,23 +41,6 @@
         padding: 20px;
         text-align: right;
     }
-    
-    #main-header main-header-content {
-        padding: 10vh;
-    }
-    
-     #portfolio .portfolio-item {
-        width: 100%;
-    }
-    
-    #contact, #contact h2 {
-        text-align: center;
-    }
-    
-    #contact #contact col-1-2:nth-child()
-    
-    
-    
     
     .main-header-content {
         padding: 10%;
@@ -98,17 +78,3 @@
     }
 }
 
-@media all and (max-width: 480px) {
-    #main-header .main-header-content {
-        font-size: 1.2em;
-        padding: 10vh;
-    }
-    
-    section, footer {
-        padding: 0 10px 60px;
-    }
-}
-
-#contact .social-link {
-    margin-bottom: 15px;
-}

@@ -10,6 +10,7 @@ body {
     font-weight: 300;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
@@ -17,7 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 section {
     padding: 0 80px 100px;
     width: 100%;
+    overflow: hidden;
 }
+
+/* "section,footer" sprawia, że footer dziedziczy wszystkie właściwości po section */
+
+section,footer {
+    padding: 0 80px 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
 
 section h2 {
     font-size: 30px;
@@ -26,8 +37,15 @@ section h2 {
     margin-bottom: 35px;
 }
 
-section h2 > span {
+h2 > span {
     color: #1ac056;
+    font-weight: 400;
+}
+
+.col-1-2 {
+    float: left;
+    width: 50%;
+    
 }
 
 #main-nav {
@@ -37,6 +55,12 @@ section h2 > span {
     right: 0;
     top: 0;
     z-index: 2;
+}
+
+/* chowam checkboxa i label */
+
+label, input[type="checkbox"] {
+    display: none;
 }
 
 #main-nav > ul {
@@ -106,17 +130,18 @@ font-weight: 300;
 }
 
 #about > figure {
-    width: 50%;
+  
     margin: 0;
-    float: left;
+    
     text-align: center;
 /* text align = wycentrowanie tekstu */
 }
 
-#about > article {
+/* Wyrzuciłam #about > article {
     width: 50%;
     float: left;
-}
+} bo wartości się powtarzały; w html trzeba było dodać klasę col.1-2 w "about" <figure class="col-1-2"><img src="img/jan-nowak.jpg"></figure>
+        <article class="about-content col-1-2"> */
 
 #about > figure > img {
     max-height: 250px;
@@ -138,3 +163,158 @@ font-weight: 300;
     margin-bottom: 15px;
 }
 
+/* Section Portfolio */
+
+#portfolio .portfolio-item {
+    height: 350px;
+    width: 33.33%;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    
+}
+
+
+#portfolio .portfolio-item .item-mask {
+    background-color: rgba(33, 59, 80, 0.7);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+#portfolio .portfolio-item .item-mask:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#portfolio .portfolio-item .portfolio-content {
+    border: 1px solid #fff;
+    color: #fff;
+/*  Jeśli damy margin: np. 10px, maska przesuwa się w dół */
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    
+    
+/*  Inny sposób: top: 50%; left: 50%; translate(-50%, -50%);  */
+}
+
+
+#portfolio .portfolio-item .portfolio-content-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+#portfolio .portfolio-item a {
+/* jak nie dałam na końcu "a", powiększył mi się cały tekst w ramce, a 2em ma mieć tylko link */
+    color: #fff;
+    font-size: 2em;
+    transition: all 0.3s;
+/*  Transition wrzucam tu, a nie do reguły niżej, bo w przeciwnym razie efekt zmiany koloru po zjechaniu myszką będzie skokowy  */
+}
+
+#portfolio .portfolio-item a:hover {
+    color: #fff;
+    
+    
+}
+
+#portfolio-item-1 {
+  background-image: url(../img/portfolio1.jpg);
+}
+
+#portfolio-item-2 {
+    background-image: url(../img/portfolio2.jpg);
+}
+
+#portfolio-item-3 {
+    background-image: url(../img/portfolio3.jpg);
+}
+
+
+/* Footer contact */
+
+#contact {
+    background-color: #213b50;
+    color: #fff;
+}
+
+#contact h2 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#contact address {
+    font-style: normal;
+}
+
+#contact .address-data {
+    margin: 35px 0;
+/*  35px - góra i dół, 0 - lewa i prawa  */
+}
+
+#contact address a {
+    color: #1ac056;
+}
+
+#contact .social-link {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 15px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    line-height: 50px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    background-color: #496c84;
+    margin-bottom: 15px;
+    border: none;
+/*  tym usuwam ramkę wewnątrz pól, którą przeglądarka dodaje domyślnie */
+    padding: 15px; 
+/*  paddingiem rozpycham pola formularza */
+}
+
+#contact form input[type="submit"] {
+    color: #fff;
+    background-color: #1ac056;
+    font-weight: 700;
+    padding: 15px;
+    text-transform: uppercase;
+    border: none;
+    float: right;
+    transition: all 0.3s;
+    width: auto;
+/* width: auto sprawia, że input dostosowuje swoją szerokość do zawartości, czyli napisu "wyślij" */
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #1ac056;
+}
+
+.copyright {
+    background-color: #10202e;
+    color: #fff;
+    padding: 5px 80px;
+}

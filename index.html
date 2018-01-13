@@ -16,6 +16,8 @@
 <body>
     <!-- Main navigation start -->
     <nav id="main-nav">
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop">
         <ul>
             <li><a href="about">o mnie</a></li>
             <li><a href="about">umiejętności</a></li>
@@ -35,8 +37,8 @@
 
     <section id="about">
         <h2>O <span>mnie</span></h2>
-        <figure><img src="img/jan-nowak.jpg"></figure>
-        <article class="about-content">
+        <figure class="col-1-2"><img src="img/jan-nowak.jpg"></figure>
+        <article class="about-content col-1-2">
             <p>Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie.</p>
             <p2>Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie. Tu będą informacje o mnie.</p2>
         </article>
@@ -64,28 +66,88 @@
             </figure>
         </div>
     </section>
-    
-<!--  stopka kontaktowa  -->
 
-    <section id="contact">
-        <div class="contact-data">
-            <h2>Jan <span>Nowak</span></h2>
+
+    <!-- Section Portfolio Start
+div#portfolio-item-$.portolio-item*3 -->
+
+    <section id="portfolio">
+        <h2>Moje <span>portfolio</span></h2>
+        <div id="portfolio-item-1" class="portfolio-item">
+            <div class="portfolio item-mask">
+                <div class="portfolio-content">
+                    <div class="portfolio-content-inner">
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente, modi corrupti odit vel eum.</p>
+                        <h4>Technologie</h4>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="contact-form"></div>
-        <address>adres</address>
-        <div class="contact-social-icons">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-google-plus" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <div id="portfolio-item-2" class="portfolio-item">
+            <div class="portfolio item-mask">
+                <div class="portfolio-content">
+                    <div class="portfolio-content-inner">
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente, modi corrupti odit vel eum.</p>
+                        <h4>Technologie</h4>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div id="portfolio-item-3" class="portfolio-item">
+            <div class="portfolio item-mask">
+                <div class="portfolio-content">
+                    <div class="portfolio-content-inner">
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente, modi corrupti odit vel eum.</p>
+                        <h4>Technologie</h4>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
     </section>
 
+    <footer id="contact">
+        <h2>Jan <span>Nowak</span></h2>
+        <div class="col-1-2">
+            <address>
+            <div class="address-data">
+            ul. Mostowa 6/13<br>
+            31-061 Kraków
+            </div>
+            <div class="address-data">
+                tel. 606 745 759 <br>
+                <a href="mailto:krakow@akademia108.pl">krakow@akademia108.pl</a>
+            </div>
+        </address>
+            <div class="social-media-icons">
+                <a href="" class="social-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="" class="social-link"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="" class="social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="" class="social-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="col-1-2">
+            <form action="">
+                <input type="text" autofocus placeholder="Imię i nazwisko" id="name" required>
 
+                <input type="text" placeholder="Adres e-mail" id="email" required>
 
+                <textarea name="" id=""></textarea>
+                <input type="submit" value="Wyślij">
+            </form>
+        </div>
 
-
-
+    </footer>
+    <div class="copyright"> Copyright &copy; Jan Nowak </div>
 </body>
 
 
